@@ -3,6 +3,8 @@ class Room():
         self.name = room_name
         self.description = None
         self.linked_rooms = {}
+        self.all_items = {}
+
         # print( self.name + " linked rooms :" + repr(self.linked_rooms) )
         
     def set_description (self, room_description) :
@@ -34,7 +36,7 @@ class Room():
 
         for item_name in self.all_items:
             item_obj = self.all_items[item_name]
-            print( "There is a " + item_name + ":" + item_obj.description)
+            print( "There is a " + item_name + ": " + item_obj.itemdescription)
 
     
     def move(self, direction):
@@ -59,12 +61,12 @@ class Room():
 
 
         
-    self.all_items = {}
-def add_item(self, item_obj, item_name):
-	self.all_items[item_name] = item_obj
     
-def remove_item(self, item_name):
-    del self.all_items[item_name]
+    def add_item(self, item_obj, item_name):
+        self.all_items[item_name] = item_obj
+        
+    def remove_item(self, item_name):
+        del self.all_items[item_name]
 
 
 

@@ -1,4 +1,7 @@
 from room import Room
+from item import Item
+
+
 kitchen = Room("Kitchen")
 kitchen.set_description("A dank and dirty room buzzing with flies.")
 
@@ -14,6 +17,9 @@ ballroom.link_room(dining_room, "east")
 dining_room.link_room(ballroom, "west")
 dining_room.link_room(kitchen, "north")
 
+candle = Item("Candle")
+candle.set_description("a small white wax sructure with a smaller unlit whick ontop")
+kitchen.add_item(candle, "Candle")
 
 current_room = kitchen
 
@@ -21,6 +27,7 @@ current_room = kitchen
 #dining_room.get_details()
 #ballroom.get_details()
 #kitchen.get_details()
+
 
 while True:
     print("\n")
