@@ -42,22 +42,13 @@ class Room():
     def move(self, direction):
         if direction in self.linked_rooms:
             return self.linked_rooms[direction]
-        else:
-            print("You can't go that way")
-            return self
-        
-        
-        if direction in self.linked_rooms:
-            return self.linked_rooms[direction]
-
         elif direction in self.all_items:
             item_obj = self.all_items[direction]
-  #do stuff
-            print(item_obj.description)
-  
         else:
             print("You can't go that way")
             return self
+        
+      
 
 
         
